@@ -2,5 +2,190 @@
 <html lang="en">
 
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, 
+                   initial-scale=1.0">
 
+<style>
+    body {
+        background-color: black;
+        background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    }
+
+    .header {
+    color: rgb(0, 255, 0);
+    font-size: medium;
+    }
+
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 30%;
+            font-weight: bolder;
+        }
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+        .show {
+            display: block;
+        }
+        h1 {
+            color: green;
+        }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>My Energy Experience</h1>
+    <img src="florida-transformed.png" class="center">
+</div>
+        
+    <button id="myButton1", class="center">
+          Click me to learn about my climate anxiety
+      </button>
+    <div id="myPopup1" class="popup">
+        <div class="popup-content">
+            <h1 style="color:green;">
+                Anxiety
+            </h1>
+            <img src="sealevel.jpeg" width="400" height="400">
+            <p>Hailing from the sunshine state, my anxieties about climate change are uniquely tied to my geographical location. 
+                Florida especially is at risk from climate change due to sea level rise, extreme weather events, and extreme heat. 
+                Beyond that, social risks from gentrification continue to further endanger already at risk communities. While I was
+            fortunate enough to grow up in an inland home with decent weather resistance, climate change endangers my family economically
+        and interpersonally as the price of housing and home-upkeep in Florida rises and wages don't follow suit. Additionally, as both my
+    parents and home age, it becomes more difficult to prepare the house for extreme weather events like hurricans. With the threat of sea-level rise
+as well, no property in the state is truly safe, as most of South Florida will eventually be threatened by extreme flooding. Beyond my state, I worry often about
+the existential effects of climate change. As a highschooler, I read plenty of articles for debate competitions about how climate change would spell the end of the world.
+These articles, whether exaggerated or not, had a lasting impact on how I view the modern climate crisis.</p>
+            <button id="closePopup1">
+                  Close
+              </button>
+        </div>
+    </div>
+    <script>
+        myButton1.addEventListener("click", function () {
+            myPopup1.classList.add("show");
+        });
+        closePopup1.addEventListener("click", function () {
+            myPopup1.classList.remove("show");
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup1) {
+                myPopup1.classList.remove("show");
+            }
+        });
+    </script>
+
+<br>
+
+<button id="myButton2", class="center">
+    Click me to learn about my climate anger
+</button>
+<div id="myPopup2" class="popup">
+  <div class="popup-content">
+      <h1 style="color:green;">
+          Anger
+      </h1>
+      <img src="desantis.jpg" width="400" height="400">
+      <p>It's difficult to discuss my relationship with climate change without acknowledging the seriously messed up political situation
+        of the state I grew up in. Despite being one of the most at-risk states in the country when it comes to climate change, Floridian politicians continually
+        reject climate science and call mitigation-measures "liberal fear tactics." Additionally, the state continues to focus on producing and using
+        natural gas and oil rather than facilitating a green-energy transition. Quite frankly, Florida is ****ed but politicians refuse to act due to hyper-partisan views and flagrant self-interest.
+      Overall, politics is and always has been bought out by energy companies that see their economic growth as more valuable than our planet and its time for that to end.
+    I'm angry that no matter what percent of Americans are in favor of energy change, or how bad the effects of cc seem to get, politicans refuse to change their agendas.
+Climate change is not a political matter, but its politicization is rampant nonetheless. As a citizen of Florida and of this country, I feel betrayed, ignored, and dejected by our political system.</p>
+      <button id="closePopup2">
+            Close
+        </button>
+  </div>
+</div>
+<script>
+  myButton2.addEventListener("click", function () {
+      myPopup2.classList.add("show");
+  });
+  closePopup2.addEventListener("click", function () {
+      myPopup2.classList.remove("show");
+  });
+  window.addEventListener("click", function (event) {
+      if (event.target == myPopup2) {
+          myPopup2.classList.remove("show");
+      }
+  });
+</script>
+
+<br>
+
+<button id="myButton3", class="center">
+    Click me to learn about my climate responsibility
+</button>
+<div id="myPopup3" class="popup">
+  <div class="popup-content">
+      <h1 style="color:green;">
+          Responsibility
+      </h1>
+      <img src="plant.jpg" width="400" height="400">
+      <p>Although much of the blame for climate change falls on energy companies and the politicians who support them, I recognize that I have an individual
+        responsibility to do my part in creating the change I want to see. Coming from a state, zip code, and nation with an above average contribution to emissions,
+        it falls on my to recognize my energy privelege and tackle it in ways that I can. According to the US Energy Information Administration, my home uses 270% of the average
+        home energy use in the United States. After learning this number recently, I felt a new and profound sense of culpability for my emissions. For long, I had thought of the burden
+        of climate change as being someone elses, perhaps the president or CEOs, but this information forced me to come to terms with the fact that my emissions are problematic as well.
+        This begs the question, then, of what a mere individual can do to assist in the fight against climate change. This can fall anywhere from installing solar pannels, to making design changes like
+        insulating windows, to reducing a/c usage during cooler days, to even plain old climate activism. With my energy-burden, I plan throughout the rest of my college experience to engage in climate
+        activism through projects like this one that use simple web-development, self-reflection, and writing to discuss the climate crisis and its toll on our planet.
+      </p>
+      <button id="closePopup3">
+            Close
+        </button>
+  </div>
+</div>
+<script>
+  myButton3.addEventListener("click", function () {
+      myPopup3.classList.add("show");
+  });
+  closePopup3.addEventListener("click", function () {
+      myPopup3.classList.remove("show");
+  });
+  window.addEventListener("click", function (event) {
+      if (event.target == myPopup3) {
+          myPopup3.classList.remove("show");
+      }
+  });
+</script>
+
+
+</body>
+  
 </html>
